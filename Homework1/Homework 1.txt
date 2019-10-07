@@ -1,0 +1,115 @@
+﻿Ryan Cummings
+Alex Ackerlund
+
+
+Public class Company{
+        String name;
+        Address headquarters;
+        List<Employee> emp;
+        List<Customer> cust;
+        VehicleRentalService vRS;
+        List<MotorBike> mB;
+        List<Car> car;
+        List<Truck> truck;
+        Service vehicleRentalService
+        
+Public Company(Service VRS){
+                Service = VRS;
+        }
+}
+
+
+Public interface Rentable{
+        Public rent()
+}
+
+
+Public Abstract Vehicle implements Rentable{
+Int Power;
+String Manufacturer;
+String regNo;
+}
+
+
+Public Truck extends Vehicle{
+        Int Power;
+        String Manufacturer;
+        String regNo;
+        Int Weight;
+}
+
+
+Public Car extends Vehicle{
+        Int Power;
+String Manufacturer;
+String regNo;
+CarKind Kind;
+Int NumSeats;
+}
+
+
+Public MotorBike extends Vehicle{
+        Int Power;
+String Manufacturer;
+String regNo;
+        MbKind Kind;
+        Int CylinderCap;
+}
+
+
+Public Abstract Service{
+        Customer customer;
+}
+
+
+Public VehicleRentalService extends Service{
+        Vehicle vehicle;
+        Public Car offerCar(){}
+        Public Motorbike offerMotorBike(){}
+        Public Truck offerTruck(){}
+}
+
+
+Public Address{
+        String street;
+        String postalCode;
+        String city;
+        List<Person> person;
+}
+
+
+Public Abstract Person{
+        String name;
+        String email;
+        Address address;
+}
+
+
+Public Employee extends Person{
+        String name;
+        String email;
+        Address address;
+}
+
+
+Public Customer extends Person{
+        String name;
+        String email;
+        BankAccount bankAccount;
+}
+
+
+Public BankAccount{
+        Int number;
+String depositor;
+String bank;
+Public BankAccount(Customer c){}
+}
+
+
+Public Subcontractor extends Employee, Customer{
+// Assuming here that language supports multiple inheritance
+        String name;
+        String email
+        Address address;
+}

@@ -1,0 +1,87 @@
+class Company {
+    String name;
+    Address headquarters;
+
+    public Company(params) {}
+}
+
+interface IRentable {
+    void rent();
+}
+
+class Person {
+    String name;
+    String email;
+
+    public Person (String typeOfPerson, String name, String email)
+}
+
+class Address {
+    String street;
+    String postalCode;
+    String city;
+
+    public Address(params) {}
+}
+
+class BankAccount {
+    double number;
+    String depositor;
+    String bank;
+
+    public BankAccount(params) {}
+}
+
+class Service {
+    Customer customer;
+
+    public Service(params) {}
+}
+
+class VehicleRentalService extends Service{
+    Vehicle vehicle;
+
+    offerCar()
+    offerMotorbike()
+    offerTruck()
+
+    public VehicleRentalService(params) {}
+}
+
+class Vehicle implements IRentable {
+
+    public Vehicle(params) {}
+    
+    public void rent() {
+        // specific implementation of rent()
+    }
+}
+
+class Truck extends Vehicle {
+    double weight;
+    double power;
+    String manufacturer;
+    String regNo;
+
+    public Truck(params) {}
+}
+
+class Car extends Vehicle {
+    CarKind kind;
+    int noSeats;
+    double power;
+    String manufacturer;
+    String regNo;
+
+    public Car(params) {}
+}
+
+class Motorbike extends Vehicle {
+    MbKind kind;
+    int cylinderCap;
+    double power;
+    String manufacturer;
+    String regNo;
+
+    public Motorbike (params) {}
+}
